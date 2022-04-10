@@ -1,0 +1,37 @@
+head
+    title Courses
+
+    div(class = 'ui container')
+        div(class='ui inverted segment')
+            div(class='ui inverted secondary menu')
+                a(class = 'item' href='/') Home
+                a(class = 'item' href='/schools') Schools
+                a(class = 'item' href='/students') Students
+                a(class = 'item' href='/courses') Courses
+                a(class = 'item' href='/clubs') Clubs
+
+
+        div(class = 'float-container')
+            each row in rows
+                div(class='float-child')
+                    div(class = 'ui card')
+                        div(class = 'image')
+                            img(src='../image/school.png')
+
+                        div(class = 'content')
+                            a(class='header' href='/courses/' + row.course_code) #{row.course_name}
+                            div(class = 'meta')
+                                span(class='date') Course Code: #{row.course_code}
+                                br
+
+
+
+    link(rel='stylesheet' href='css.css')
+
+
+
+    //div(class = 'ui relaxed divided list')
+    //    div(class = 'item')
+    //        div(class='content')
+    //            a(class='header' href='/courses/' + row.course_code) #{row.course_name}
+    //            div(class = 'description') Course Code: #{row.course_code}
